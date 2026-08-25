@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAYRIX Consulting — Strategy, Transformation & Growth</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <meta name="description"
+        content="VAYRIX helps ambitious organizations solve complex business challenges through strategy, digital transformation, data, AI, and operational excellence.">
+    <meta name="keywords" content="Consulting, Strategy, Digital Transformation, Business Growth, Data, AI">
+
+    <!-- Google Fonts: Plus Jakarta Sans for headings, Inter for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Phosphor Icons (Executive look) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="loading-state">
+
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="strategy-symbol">
+                <div class="symbol-ring r1"></div>
+                <div class="symbol-ring r2"></div>
+                <div class="symbol-ring r3"></div>
+                <div class="data-point"></div>
+            </div>
+            <div class="loading-text">BUILDING THE STRATEGY...</div>
+            <div class="loading-progress">
+                <div class="progress-bar" id="loaderBar"></div>
+            </div>
+            <div class="progress-percentage" id="loaderPercentage">0%</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="vayrix-nav" id="mainNav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 7L12 22L3 7L12 2L21 7Z" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M12 22V12" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M3 7L12 12L21 7" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+                VAYRIX
+            </a>
+
+            <div class="desktop-menu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="industries.html" class="nav-link">Industries</a>
+                <a href="insights.html" class="nav-link">Insights</a>
+
+            </div>
+
+            <div class="nav-actions">
+                <a href="#contact" class="btn-premium d-none d-xl-flex magnetic-btn">Book a Consultation</a>
+                <button class="menu-toggle d-xl-none" id="mobileMenuBtn" aria-label="Toggle Menu">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Slide-in -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <div class="mobile-menu-panel" id="mobileMenuPanel">
+        <div class="mobile-menu-header">
+            <a href="index.html" class="logo mobile-close-link">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 7L12 22L3 7L12 2L21 7Z" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M12 22V12" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M3 7L12 12L21 7" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+                VAYRIX
+            </a>
+            <button class="close-menu-btn" id="closeMenuBtn" aria-label="Close Menu">
+                <i class="ph ph-x"></i>
+            </button>
+        </div>
+        <div class="mobile-menu-links">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="about.html" class="mobile-nav-link">About</a>
+            <a href="services.html" class="mobile-nav-link">Services</a>
+            <a href="industries.html" class="mobile-nav-link">Industries</a>
+            <a href="insights.html" class="mobile-nav-link">Insights</a>
+            <a href="#contact" class="btn-premium magnetic-btn mt-5 w-100 justify-content-center text-center d-flex mobile-nav-cta">Book a Consultation</a>
+        </div>
+    </div>
+
+    <main id="lenis-container">
+<!-- 04 - INDUSTRIES & SOLUTIONS -->
+        <section id="industries" class="industries-section pt-10 pb-10">
+            <div class="container mb-5 text-center">
+                <h2 class="section-title split-text">STRATEGY THAT UNDERSTANDS YOUR INDUSTRY.</h2>
+            </div>
+            <div class="container mt-5">
+                <div class="industry-ecosystem">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 mb-5">
+                            <div class="industry-list">
+                                <button class="industry-btn active" data-target="ind-financial">Financial
+                                    Services</button>
+                                <button class="industry-btn" data-target="ind-healthcare">Healthcare</button>
+                                <button class="industry-btn" data-target="ind-technology">Technology</button>
+                                <button class="industry-btn" data-target="ind-retail">Retail</button>
+                                <button class="industry-btn" data-target="ind-manufacturing">Manufacturing</button>
+                                <button class="industry-btn" data-target="ind-energy">Energy</button>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-8">
+                            <div class="industry-display-panel">
+                                <!-- Financial Services -->
+                                <div class="industry-content active" id="ind-financial">
+                                    <div class="ind-visual-wrapper">
+                                        <img src="assets/images/ind_finance_ai.jpg" alt="Financial Services"
+                                            class="ind-img">
+                                        <div class="ind-overlay-ui">
+                                            <div class="ind-stat">
+                                                <div class="ind-stat-val">+14%</div>
+                                                <div class="ind-stat-lbl">Margin Optimization</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ind-text-content mt-4">
+                                        <h3>Financial Services</h3>
+                                        <p>Navigating regulatory complexities while driving digital modernization, open
+                                            banking strategies, and AI-driven risk management models.</p>
+                                    </div>
+                                </div>
+                                <!-- Healthcare -->
+                                <div class="industry-content" id="ind-healthcare">
+                                    <div class="ind-visual-wrapper">
+                                        <img src="assets/images/ind_health_ai.jpg" alt="Healthcare" class="ind-img">
+                                    </div>
+                                    <div class="ind-text-content mt-4">
+                                        <h3>Healthcare</h3>
+                                        <p>Transforming patient experiences, optimizing operational workflows, and
+                                            leveraging data for predictive care and resource management.</p>
+                                    </div>
+                                </div>
+                                <!-- Technology -->
+                                <div class="industry-content" id="ind-technology">
+                                    <div class="ind-visual-wrapper">
+                                        <img src="assets/images/ind_tech_ai.jpg" alt="Technology" class="ind-img">
+                                    </div>
+                                    <div class="ind-text-content mt-4">
+                                        <h3>Technology</h3>
+                                        <p>Accelerating product innovation, optimizing go-to-market strategies, and
+                                            scaling infrastructure for rapid global growth.</p>
+                                    </div>
+                                </div>
+                                <!-- Retail -->
+                                <div class="industry-content" id="ind-retail">
+                                    <div class="ind-visual-wrapper">
+                                        <img src="assets/images/ind_retail_ai.jpg" alt="Retail" class="ind-img">
+                                    </div>
+                                    <div class="ind-text-content mt-4">
+                                        <h3>Retail</h3>
+                                        <p>Building omnichannel resilience, dynamic pricing engines, and personalized
+                                            consumer journeys through advanced analytics.</p>
+                                    </div>
+                                </div>
+                                <!-- Manufacturing -->
+                                <div class="industry-content" id="ind-manufacturing">
+                                    <div class="ind-visual-wrapper">
+                                        <img src="assets/images/ind_mfg_ai.jpg" alt="Manufacturing" class="ind-img">
+                                    </div>
+                                    <div class="ind-text-content mt-4">
+                                        <h3>Manufacturing</h3>
+                                        <p>Implementing Industry 4.0, optimizing supply chain networks, and unlocking
+                                            efficiency through intelligent automation.</p>
+                                    </div>
+                                </div>
+                                <!-- Energy -->
+                                <div class="industry-content" id="ind-energy">
+                                    <div class="ind-visual-wrapper">
+                                        <img src="assets/images/ind_energy_ai.jpg" alt="Energy" class="ind-img">
+                                    </div>
+                                    <div class="ind-text-content mt-4">
+                                        <h3>Energy</h3>
+                                        <p>Managing the energy transition, driving sustainable operations, and
+                                            modernizing legacy grids with IoT technologies.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Related Section -->
+        <section class="related-section pt-10 pb-10" style="background: var(--surface);">
+            <div class="container text-center mb-5">
+                <h2 class="section-title split-text">GLOBAL MARKET IMPACT</h2>
+            </div>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <img src="assets/images/related_industries.jpg" alt="Global Reach" class="img-fluid rounded-premium w-100" style="aspect-ratio: 16/9; object-fit: cover;">
+                    </div>
+                    <div class="col-lg-6 px-lg-5">
+                        <h3 class="mb-4">Connecting Global Ecosystems</h3>
+                        <p class="text-white-50" style="font-size: 1.1rem;">Industry borders are blurring. Our global network enables us to bring cross-industry perspectives, applying innovations from tech to healthcare, and from finance to manufacturing, ensuring you stay ahead of disruption.</p>
+                        <a href="contact.html" class="btn-outline magnetic-btn mt-4">View Global Cases</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- 06 - CONTACT -->
+        <section id="contact" class="contact-section pt-10 pb-10 dark-section">
+            <div class="contact-bg-elements">
+                <div class="contact-grid"></div>
+                <div class="contact-glow"></div>
+            </div>
+            <div class="container position-relative z-1">
+                <div class="row">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <h2 class="section-title text-white split-text">YOUR NEXT BIG MOVE STARTS WITH A CONVERSATION.
+                        </h2>
+                        <p class="section-lead text-white-50 mt-4">Tell us what you're trying to solve, build,
+                            transform, or achieve. Our senior partners will review your inquiry and align the right
+                            expertise.</p>
+
+                        <div class="contact-info mt-5">
+                            <div class="info-item">
+                                <i class="ph ph-buildings"></i>
+                                <div>
+                                    <h5>Global Headquarters</h5>
+                                    <p>One World Trade Center, Suite 8500<br>New York, NY 10007</p>
+                                </div>
+                            </div>
+                            <div class="info-item mt-4">
+                                <i class="ph ph-envelope-simple"></i>
+                                <div>
+                                    <h5>Executive Inquiries</h5>
+                                    <p>strategy@vayrix.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="contact-form-wrapper" data-tilt data-tilt-max="2" data-tilt-speed="400"
+                            data-tilt-glare data-tilt-max-glare="0.1">
+                            <form class="vayrix-form" id="contactForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-floating-custom">
+                                            <input type="text" id="fullName" class="form-control" required
+                                                placeholder=" ">
+                                            <label for="fullName">Full Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-floating-custom">
+                                            <input type="text" id="company" class="form-control" required
+                                                placeholder=" ">
+                                            <label for="company">Company</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <div class="form-floating-custom">
+                                        <input type="email" id="email" class="form-control" required placeholder=" ">
+                                        <label for="email">Business Email</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-floating-custom select-wrapper">
+                                            <select id="industry" class="form-control" required>
+                                                <option value="" disabled selected>Select Industry</option>
+                                                <option value="financial">Financial Services</option>
+                                                <option value="tech">Technology</option>
+                                                <option value="health">Healthcare</option>
+                                                <option value="manufacturing">Manufacturing</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-floating-custom select-wrapper">
+                                            <select id="interest" class="form-control" required>
+                                                <option value="" disabled selected>Area of Interest</option>
+                                                <option value="strategy">Strategy</option>
+                                                <option value="digital">Digital Transformation</option>
+                                                <option value="data">Data & AI</option>
+                                                <option value="operations">Operations</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <div class="form-floating-custom">
+                                        <textarea id="details" class="form-control" required placeholder=" "
+                                            rows="4"></textarea>
+                                        <label for="details">Project Details / Challenge</label>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn-premium w-100 magnetic-btn mb-4">Start the
+                                    Conversation</button>
+                                <div class="social-links justify-content-center">
+                                    <a href="#"><i class="ph ph-linkedin-logo"></i></a>
+                                    <a href="#"><i class="ph ph-x-logo"></i></a>
+                                    <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                                </div>
+                            </form>
+                            <div class="form-success text-center" id="formSuccess">
+                                <i class="ph ph-check-circle text-highlight mb-3" style="font-size: 3rem;"></i>
+                                <h4>Inquiry Received</h4>
+                                <p class="text-white-50">A senior partner will contact you shortly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+<!-- Footer -->
+    <footer class="vayrix-footer">
+        <div class="footer-bg-animation"></div>
+        <div class="container position-relative z-1">
+            <div class="row border-bottom footer-top pb-5 mb-5 border-secondary">
+                <div class="col-12 col-lg-4 mb-5 mb-lg-0 text-center text-lg-start d-flex flex-column align-items-center align-items-lg-start">
+                    <a href="index.html" class="logo mb-4">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 7L12 22L3 7L12 2L21 7Z" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M12 22V12" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M3 7L12 12L21 7" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/>
+                        </svg>
+                        VAYRIX
+                    </a>
+                    <p class="mt-3 text-white-50" style="max-width: 280px;">Strategy that moves business forward. We build capabilities
+                        for tomorrow's market leaders.</p>
+                    <div class="social-links mt-4 justify-content-center justify-content-lg-start">
+                        <a href="#"><i class="ph ph-linkedin-logo"></i></a>
+                        <a href="#"><i class="ph ph-x-logo"></i></a>
+                        <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-2 mb-4 mb-lg-0 text-center text-lg-start">
+                    <h5 class="footer-heading">Expertise</h5>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Strategy</a></li>
+                        <li><a href="services.html">Digital</a></li>
+                        <li><a href="services.html">Data & AI</a></li>
+                        <li><a href="services.html">Operations</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-2 mb-4 mb-lg-0 text-center text-lg-start">
+                    <h5 class="footer-heading">Company</h5>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="insights.html">Insights</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-2 mb-4 mb-lg-0 text-center text-lg-start">
+                    <h5 class="footer-heading">Resources</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Whitepapers</a></li>
+                        <li><a href="#">Webinars</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-2 text-center text-lg-start">
+                    <h5 class="footer-heading">Locations</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">New York</a></li>
+                        <li><a href="#">London</a></li>
+                        <li><a href="#">Singapore</a></li>
+                        <li><a href="#">Dubai</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row footer-bottom pb-4 align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <span class="text-white-50">&copy; 2026 VAYRIX Consulting. All rights reserved.</span>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="legal-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="scroll-to-top" aria-label="Scroll to top">
+        <i class="ph ph-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- countUp.js umd format -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.8.0/countUp.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
