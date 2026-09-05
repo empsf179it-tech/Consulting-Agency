@@ -1187,7 +1187,7 @@ a {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     display: flex !important;
     top: auto;
-    bottom: 0;
+    bottom: 20px;
     margin-top: 0;
 }
 
@@ -1632,6 +1632,25 @@ textarea.form-control {
         width: 100%;
         max-width: 320px;
         justify-content: center;
+    }
+
+    .ind-visual-wrapper {
+        display: flex;
+        flex-direction: column;
+        aspect-ratio: auto;
+        overflow: visible;
+        box-shadow: none;
+    }
+
+    .ind-img {
+        border-radius: 16px;
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+
+    .ind-overlay-ui {
+        position: static;
+        margin-top: 1rem;
     }
 }
 
